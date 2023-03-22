@@ -15,40 +15,30 @@
 
 <body>
     <header class="d-flex flex-column flex-shrink-0" style="width: 72px;">
-        <a href="/music" class="d-block p-3 link-dark text-decoration-none" data-bs-toggle="tooltip">
+        <a href="music" class="d-block p-3 link-dark text-decoration-none animate__animated animate__slideInRight" data-bs-toggle="tooltip">
             <img src="assets/audio.png" class="bi pe-none" width="39" height="39">
         </a>
-        <ul class="nav nav-flush flex-column mb-auto text-center">
-            <li class="nav-item">
-                <a href="#" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip">
-                    <img src="assets/home.png" class="bi pe-none" width="24" height="24" role="img">
-                </a>
-            </li>
-            <hr>
-            <li class="end">
-                <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip">
-                    <img src="assets/profile-no.png" class="bi pe-none" width="24" height="24" role="img">
-                </a>
-            </li>
     </header>
-    <main>
-        <div class="playlist">
-            <h3 class="my-4 ms-5">В трендах сейчас</h3>
-            <div class="albums ms-5">
-                <div class="f">
-                    <div class="img-text animate__animated animate__zoomIn me-3">
+    <main class=" animate__animated animate__slideInRight">
+        <h3 class="my-4 ms-5">В трендах сейчас</h3>
+        <div class="albums ms-5">
+            <div class="d-flex">
+                <a href="album.html" class="me-3">
+                    <div class="img-text animate__animated animate__zoomIn">
                         <img src="assets/dark.jpg" class="img">
                         <div class="body-1">
                             <p class="card-text">Тёмная Сторона</p>
                         </div>
                     </div>
-                    <div href="#" class="img-text animate__animated animate__zoomIn">
+                </a>
+                <a href="album.html">
+                    <div class="img-text animate__animated animate__zoomIn">
                         <img src="assets/contagion.jpg" class="img">
                         <div class="body-2">
                             <p class="card-text">Собраться с мыслями</p>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         </div>
