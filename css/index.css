@@ -2,21 +2,13 @@
 
 * {
     font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
 }
 
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     background: #373658;
 }
 
 header {
-    height: 100vh;
-    height: -webkit-fill-available;
-    max-height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
     background: #373658;
 }
 
@@ -36,6 +28,7 @@ hr {
 
 .playlist {
     position: absolute;
+    width: 96.3%;
     height: 100%;
     background: #3D3B60;
     left: 72px;
@@ -45,23 +38,17 @@ hr {
     color: white;
 }
 
-.main {
-    margin-top: 15px;
-    margin-left: 40px;
-    display: flex;
-}
-
 .link-dark {
     margin-top: 30px;
 }
 
-.card-img-top {
+.img {
     max-width: 210px;
     max-height: 170px;
     border-radius: 20px;
 }
 
-.overlay-1 {
+.body-1 {
     position: absolute;
     background: #282682;
     padding: 15px 58px 15px 15px;
@@ -71,30 +58,17 @@ hr {
     opacity: .94;
 }
 
-.img-text-1 {
-    position: relative;
-    max-width: 210px;
-    margin-right: 12px;
-    cursor: pointer;
-}
-
-.img-text-2 {
+.img-text {
     position: relative;
     max-width: 210px;
 }
 
 p {
-    margin-bottom: 0;
     font-size: 13px;
     color: white;
 }
 
-h3 {
-    margin-top: 40px;
-    margin-left: 40px;
-}
-
-.overlay-2 {
+.body-2 {
     position: absolute;
     background: #792787;
     padding: 15px 27px 15px 15px;
@@ -102,4 +76,13 @@ h3 {
     bottom: 15px;
     left: 17px;
     opacity: .94;
+}
+
+.albums {
+    overflow-x: auto;
+    min-width: 1000px;
+}
+
+.f {
+    display: flex;
 }
