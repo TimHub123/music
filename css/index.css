@@ -20,24 +20,24 @@ main {
 }
 
 .img {
-    max-width: 290px;
-    max-height: 250px;
+    max-width: 280px;
+    max-height: 240px;
     border-radius: 20px;
 }
 
 .body-1 {
     position: absolute;
     background: #282682;
-    padding: 15px 137px 15px 15px;
+    padding: 15px 127px 15px 15px;
     border-radius: 15px;
-    top: 169px;
+    top: 159px;
     left: 17px;
     opacity: .94;
 }
 
 .img-text {
     position: relative;
-    max-width: 290px;
+    max-width: 280px;
 }
 
 p {
@@ -48,7 +48,7 @@ p {
 .body-2 {
     position: absolute;
     background: #792787;
-    padding: 15px 105px 15px 15px;
+    padding: 15px 95px 15px 15px;
     border-radius: 15px;
     bottom: 15px;
     left: 17px;
