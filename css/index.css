@@ -20,24 +20,24 @@ main {
 }
 
 .img {
-    max-width: 230px;
-    max-height: 190px;
+    max-width: 310px;
+    max-height: 270px;
     border-radius: 20px;
 }
 
 .body-1 {
     position: absolute;
     background: #282682;
-    padding: 15px 77px 15px 15px;
+    padding: 15px 157px 20px 15px;
     border-radius: 15px;
-    top: 120px;
+    top: 182px;
     left: 17px;
     opacity: .94;
 }
 
 .img-text {
     position: relative;
-    max-width: 230px;
+    max-width: 310px;
 }
 
 p {
@@ -48,7 +48,7 @@ p {
 .body-2 {
     position: absolute;
     background: #792787;
-    padding: 15px 45px 15px 15px;
+    padding: 15px 125px 20px 15px;
     border-radius: 15px;
     bottom: 15px;
     left: 17px;
@@ -89,17 +89,21 @@ div .d-flex {
 }
 
 @media (max-width: 425px) {
-    .ms-auto {
-        visibility: hidden;
-        width: 0;
-    }
     .list {
         margin-top: 10px;
     }
+    header {
+        visibility: hidden;
+        width: 0;
+    }
+    main {
+        left: 0;
+    }
 }
 
-@media (max-height: 740px) {
-    main {
-        height: auto;
+@media (max-width: 1180px) {
+    .ms-auto {
+        visibility: hidden;
+        width: 0;
     }
 }
