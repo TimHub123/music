@@ -89,7 +89,7 @@ div .d-flex {
 }
 
 @media (max-width: 425px) {
-    .list {
+    .playlist {
         margin-top: 10px;
     }
     header {

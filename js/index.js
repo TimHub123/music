@@ -1,13 +1,5 @@
 let album = document.querySelector(`.album`);
 
-let albums = [{
-    title: `Тёмная Сторона`,
-    img: `assets/dark.jpg`
-}, {
-    title: `Собраться с мыслями`,
-    img: `assets/contagion.jpg`
-}];
-
 for (let i = 0; i < albums.length; i++) {
     if (i == 0) {
         album.innerHTML += `
