@@ -3,3 +3,8 @@
         height: auto;
     }
 }
+
+.album {
+    position: relative;
+    max-width: 270px;
+}

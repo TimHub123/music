@@ -35,11 +35,6 @@ main {
     opacity: .94;
 }
 
-.img-text {
-    position: relative;
-    max-width: 270px;
-}
-
 p {
     font-size: 13px;
     color: white;
