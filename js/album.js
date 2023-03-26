@@ -16,7 +16,7 @@ for (let j = 0; j < tracks.length; j++) {
     let track = tracks[j];
     playlist.innerHTML += `
     <li class="d-flex align-items-center mb-3">
-        <span class="me-3">0${j}</span>
+        <span class="me-3">0${j + 1}</span>
         <img class="me-3" src="${track.img}" width="50px" height="50px">
         <div class="text me-5">
             <div>${track.title}</div>
