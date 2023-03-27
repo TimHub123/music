@@ -1,13 +1,17 @@
 let container = document.querySelector(`.album`);
 let playlist = document.querySelector(`.playlist`);
 
-let album = albums[0];
+let search = new URLSearchParams(window.location.search);
+
+let i = search.get(`i`);
+
+let album = albums[i];
 
 let tracks = album.tracks;
 
 container.innerHTML = `
 <img src="${album.img}" class="img">
-<div class="body-1" style="left: 30px;">
+<div class="body-${Number(i) + 1}" style="left: 30px;">
     <p class="card-text">${album.title}</p>
 </div>
 `;

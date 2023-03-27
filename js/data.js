@@ -52,5 +52,54 @@ let albums = [{
     }]
 }, {
     title: `Собраться с мыслями`,
-    img: `assets/contagion.jpg`
+    img: `assets/contagion.jpg`,
+    tracks: [{
+        title: `Mi Gente`,
+        author: `J Balvin, Willy William`,
+        time: `03:07`,
+        more: `3 100 000 000`,
+        img: `assets/mi.png`
+    }, {
+        title: `Thunder`,
+        author: `Imagine Dragons`,
+        time: `03:07`,
+        more: `1 900 000 000`,
+        img: `assets/thunder.jpg`
+    }, {
+        title: `Heartless`,
+        author: `Kanye West`,
+        time: `03:32`,
+        more: `202 000 000`,
+        img: `assets/heartless.jpg`
+    }, {
+        title: `Поболело и прошло`,
+        author: `HENSY`,
+        time: `02:34`,
+        more: `84 000 000`,
+        img: `assets/pain.jpg`
+    }, {
+        title: `Black Skinhead`,
+        author: `Kanye West`,
+        time: `01:39`,
+        more: `64 000 000`,
+        img: `assets/black.jpg`
+    }, {
+        title: `Assassin's Creed IV`,
+        author: `Brian Tyler`,
+        time: `02:13`,
+        more: `7 600 000`,
+        img: `assets/IV.jpg`
+    }, {
+        title: `Beast of America`,
+        author: `Nico Vega`,
+        time: `04:23`,
+        more: `4 900 000`,
+        img: `assets/beast.jpg`
+    }, {
+        title: `The Last Of Us`,
+        author: `Gustavo Santaoolalla`,
+        time: `03:03`,
+        more: `4 600 000`,
+        img: `assets/of.jpg`
+    }]
 }];
