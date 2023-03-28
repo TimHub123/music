@@ -8,7 +8,7 @@ body {
     background: #373658;
 }
 
-main {
+.back {
     position: absolute;
     height: 100%;
     background: #3D3B60;
@@ -92,7 +92,7 @@ div .d-flex {
         width: 0;
         height: 0;
     }
-    main {
+    .back {
         left: 0;
     }
 }

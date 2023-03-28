@@ -1,5 +1,5 @@
-@media (max-height: 844px) {
-    main {
+@media (max-height: 915px) {
+    .back {
         height: auto;
     }
 }
@@ -7,4 +7,24 @@
 .album {
     position: relative;
     max-width: 270px;
+}
+
+.play {
+    position: absolute;
+    width: 96%;
+    bottom: 30px;
+    background: #000B27;
+    height: 80px;
+    opacity: .4;
+    border-radius: 20px;
+}
+
+.row {
+    margin-bottom: 100px;
+}
+
+.img-go {
+    align-items: center;
+    height: 40px;
+    margin-left: 30px;
 }
