@@ -5,6 +5,7 @@ let go = document.querySelector(`.img-go`);
 let audio = document.querySelector(`.audio`);
 let imgTrack = document.querySelector(`.img-track`);
 let timeNode = document.querySelector(`.time`);
+let endTime = document.querySelector(`.end`);
 
 let search = new URLSearchParams(window.location.search);
 
@@ -48,7 +49,6 @@ let trackNodes = document.querySelectorAll(`.track`);
 
 for (let i = 0; i < trackNodes.length; i++) {
     trackNodes[i].addEventListener(`click`, function () {
-        let track = tracks[i];
         if (d == i) {
             if (isPlaying) {
                 go.src = `assets/play.png`;
@@ -62,7 +62,7 @@ for (let i = 0; i < trackNodes.length; i++) {
             }
         } else {
             isPlaying = false;
-            timeNode.innerHTML = tracks[i].time;
+            endTime.innerHTML = tracks[i].time;
             audio.src = tracks[i].src;
             imgTrack.src = tracks[i].img;
             d = i;
@@ -82,8 +82,24 @@ for (let i = 0; i < trackNodes.length; i++) {
 }
 
 function updateProgress() {
-    timeNode.innerHTML = audio.currentTime;
+    let time = getTime(audio.currentTime);
+    if (timeNode != time) {
+        timeNode.innerHTML = time;
+    }
     if (isPlaying) {
         requestAnimationFrame(updateProgress);
     }
-  }
+}
+
+function getTime(time) {
+    let currentSeconds = Math.floor(time);
+    let minutes = Math.floor(currentSeconds/60);
+    let seconds = Math.floor(currentSeconds%60);
+    if (minutes < 10) {
+        minutes = `0` + minutes;
+    }
+    if (seconds < 10) {
+        seconds = `0` + seconds;
+    }
+    return `${minutes}:${seconds}`;
+}
