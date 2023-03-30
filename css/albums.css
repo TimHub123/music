@@ -26,9 +26,20 @@
 .img-go {
     align-items: center;
     height: 40px;
-    margin-left: 30px;
 }
 
 .end {
     font-size: 13px;
+}
+
+.img-track {
+    border-radius: 15px;
+}
+
+.progress {
+    width: 35%;
+}
+
+.volume {
+    height: 27px;
 }

@@ -6,6 +6,9 @@ let audio = document.querySelector(`.audio`);
 let imgTrack = document.querySelector(`.img-track`);
 let timeNode = document.querySelector(`.time`);
 let endTime = document.querySelector(`.end`);
+let Name = document.querySelector(`h3`);
+let progressBar = document.querySelector(`.progress-bar`);
+let volume = document.querySelector(`.volume`);
 
 let search = new URLSearchParams(window.location.search);
 
@@ -18,6 +21,8 @@ let tracks = album.tracks;
 let d;
 
 let isPlaying = false;
+
+Name.innerHTML = album.title;
 
 container.innerHTML = `
 <img src="${album.img}" class="img">
@@ -61,6 +66,8 @@ for (let i = 0; i < trackNodes.length; i++) {
                 updateProgress();
             }
         } else {
+            audio.muted = false;
+            volume.src = `assets/up_volume.png`;
             isPlaying = false;
             endTime.innerHTML = tracks[i].time;
             audio.src = tracks[i].src;
@@ -83,8 +90,9 @@ for (let i = 0; i < trackNodes.length; i++) {
 
 function updateProgress() {
     let time = getTime(audio.currentTime);
-    if (timeNode != time) {
+    if (timeNode.innerHTML != time) {
         timeNode.innerHTML = time;
+        progressBar.style.width = audio.currentTime * 100 / audio.duration + `%`;
     }
     if (isPlaying) {
         requestAnimationFrame(updateProgress);
@@ -93,8 +101,8 @@ function updateProgress() {
 
 function getTime(time) {
     let currentSeconds = Math.floor(time);
-    let minutes = Math.floor(currentSeconds/60);
-    let seconds = Math.floor(currentSeconds%60);
+    let minutes = Math.floor(currentSeconds / 60);
+    let seconds = Math.floor(currentSeconds % 60);
     if (minutes < 10) {
         minutes = `0` + minutes;
     }
@@ -103,3 +111,26 @@ function getTime(time) {
     }
     return `${minutes}:${seconds}`;
 }
+
+volume.addEventListener(`click`, function () {
+    if (!audio.muted) {
+        audio.muted = true;
+        volume.src = `assets/off_volume.png`;
+    } else {
+        audio.muted = false;
+        volume.src = `assets/up_volume.png`;
+    }
+});
+
+go.addEventListener(`click`, function () {
+    if (isPlaying) {
+        go.src = `assets/play.png`;
+        isPlaying = false;
+        audio.pause();
+    } else {
+        go.src = `assets/pause.png`;
+        isPlaying = true;
+        audio.play();
+        updateProgress();
+    }
+});
